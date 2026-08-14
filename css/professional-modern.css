@@ -1,0 +1,282 @@
+/*
+  MODERN PROFESSIONAL SCHOOL UI
+  Refines the Campus Mosaic content into a calm, international-school interface.
+  Retains Merryland burgundy, navy, violet and gold, with a cleaner visual rhythm.
+*/
+:root {
+  --pro-navy: #10233e;
+  --pro-navy-soft: #183657;
+  --pro-burgundy: #7b0046;
+  --pro-magenta: #b41f5e;
+  --pro-violet: #6f57c8;
+  --pro-gold: #e8b852;
+  --pro-paper: #faf9f7;
+  --pro-surface: #ffffff;
+  --pro-mist: #f1f4f8;
+  --pro-text: #435168;
+  --pro-line: #dce3eb;
+  --pro-shadow: 0 18px 45px rgba(16,35,62,.10);
+  --pro-radius: 20px;
+  --pro-container: min(1180px, calc(100% - 48px));
+}
+
+body.mosaic-site.modern-site { background: var(--pro-paper); color: var(--pro-text); }
+.modern-site .topbar { background: var(--pro-navy); }
+.modern-site .site-header { z-index: 1002; border-bottom: 1px solid #e6ebf0; background: rgba(255,255,255,.97); }
+.modern-site .site-header.is-scrolled { border-bottom-color: #e6ebf0; box-shadow: 0 8px 25px rgba(16,35,62,.08); }
+.modern-site .navbar { min-height: 80px; }
+.modern-site .brand__crest { width: 46px; height: 49px; }
+.modern-site .brand__name { color: var(--pro-navy); font-family: Georgia, serif; font-size: 1.18rem; font-weight: 700; letter-spacing: -.025em; text-transform: none; }
+.modern-site .brand__tagline { color: var(--pro-burgundy); font-size: .56rem; letter-spacing: .09em; }
+.modern-site .nav-link, .modern-site .nav-toggle { color: #34445a; font-size: .76rem; font-weight: 750; letter-spacing: 0; text-transform: none; }
+.modern-site .nav-link:hover, .modern-site .nav-link.is-active, .modern-site .nav-toggle:hover { color: var(--pro-burgundy); }
+.modern-site .nav-apply { border-radius: 999px; background: var(--pro-burgundy); box-shadow: none; }
+.modern-site .nav-apply:hover { background: var(--pro-magenta); box-shadow: 0 7px 16px rgba(123,0,70,.22); }
+.modern-site .dropdown { border: 1px solid var(--pro-line); border-radius: 14px; box-shadow: var(--pro-shadow); }
+.modern-site .menu-button { border-radius: 11px; background: var(--pro-navy); }
+.modern-site .site-footer { border-top: 0; background: var(--pro-navy); }
+.modern-site .footer-main { grid-template-columns: 1.35fr .8fr .8fr 1.1fr; }
+.modern-site .footer-brand .brand__name { color: #fff; font-family: Georgia, serif; text-transform: none; }
+.modern-site .footer-title { color: var(--pro-gold); }
+.modern-site .social-link, .modern-site .newsletter { border-radius: 9px; }
+.modern-site .newsletter button { background: var(--pro-gold); }
+.modern-site .whatsapp-button { border-radius: 999px; background: #16856a; box-shadow: 0 8px 18px rgba(11,31,58,.16); }
+.modern-site .back-to-top { border-radius: 50%; background: var(--pro-burgundy); }
+
+/* Home: quiet asymmetry, generous whitespace, image-led trust. */
+.modern-site .mosaic-hero { overflow: hidden; padding: 0; background: linear-gradient(135deg, #f8f4f5 0%, #fff 47%, #f1f4fb 100%); }
+.modern-site .mosaic-hero::before, .modern-site .mosaic-hero::after { display: none; }
+.modern-site .mosaic-hero__ticker { display: none; }
+.modern-site .mosaic-hero__grid { display: grid; grid-template-columns: minmax(0, .94fr) minmax(460px, 1.06fr); gap: clamp(44px, 7vw, 95px); width: var(--pro-container); min-height: 600px; }
+.modern-site .mosaic-hero__intro { padding: 82px 0 70px; }
+.modern-site .mosaic-kicker { color: var(--pro-burgundy); font-size: .7rem; letter-spacing: .14em; }
+.modern-site .mosaic-kicker > span { width: 25px; height: 2px; }
+.modern-site .mosaic-hero h1 { max-width: 600px; color: var(--pro-navy); font-family: Georgia, serif; font-size: clamp(3.4rem, 5.8vw, 6.3rem); font-weight: 500; letter-spacing: -.075em; line-height: .88; text-transform: none; }
+.modern-site .mosaic-hero h1 em { color: var(--pro-burgundy); font-family: Georgia, serif; font-size: 1em; font-weight: 500; letter-spacing: -.075em; }
+.modern-site .mosaic-hero__lead { max-width: 495px; margin-top: 26px; color: #4e5d73; font-size: 1.03rem; line-height: 1.72; }
+.modern-site .mosaic-button { border-radius: 10px; background: var(--pro-burgundy); box-shadow: none; font-size: .78rem; letter-spacing: 0; text-transform: none; }
+.modern-site .mosaic-button:hover { background: var(--pro-magenta); box-shadow: 0 10px 21px rgba(123,0,70,.2); transform: translateY(-2px); }
+.modern-site .mosaic-text-link { color: var(--pro-navy); font-size: .75rem; letter-spacing: .02em; text-transform: none; }
+.modern-site .mosaic-hero__footnote { margin-top: 43px; padding-top: 17px; border-top: 1px solid #cfd8e3; }
+.modern-site .mosaic-hero__footnote strong { color: var(--pro-burgundy); }
+.modern-site .mosaic-hero__visual { min-height: 600px; }
+.modern-site .mosaic-hero__gridlines { display: none; }
+.modern-site .mosaic-photo { overflow: visible; background: transparent; box-shadow: none; }
+.modern-site .mosaic-photo--main { top: 64px; right: 0; width: 82%; height: 450px; border: 0; border-radius: 22px; box-shadow: var(--pro-shadow); transform: none; overflow: hidden; }
+.modern-site .mosaic-photo--main::before { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, transparent 50%, rgba(16,35,62,.75)); content: ""; }
+.modern-site .mosaic-photo figcaption { z-index: 2; padding: 16px 18px; color: #fff; background: transparent; font-size: .68rem; letter-spacing: .04em; }
+.modern-site .mosaic-photo figcaption span { color: var(--pro-gold); }
+.modern-site .mosaic-photo--postcard { bottom: 47px; left: 0; width: 210px; height: 142px; border: 7px solid #fff; border-radius: 14px; box-shadow: 0 12px 32px rgba(16,35,62,.18); transform: none; overflow: hidden; }
+.modern-site .mosaic-photo--postcard figcaption { padding: 8px 10px; color: var(--pro-navy); background: #fff; font-size: .59rem; }
+.modern-site .mosaic-hero__seal { top: 30px; left: 24px; width: 94px; height: 94px; border: 1px solid rgba(255,255,255,.65); color: #fff; background: rgba(16,35,62,.88); box-shadow: 0 8px 20px rgba(16,35,62,.14); transform: none; }
+.modern-site .mosaic-hero__seal span { display: none; }
+.modern-site .mosaic-hero__vertical { display: none; }
+.modern-site .mosaic-hero__index { display: grid; grid-template-columns: 1.3fr repeat(3, .57fr); width: var(--pro-container); min-height: 86px; margin-top: -43px; color: var(--pro-navy); border: 1px solid #e1e7ee; border-radius: 14px; background: #fff; box-shadow: 0 12px 26px rgba(16,35,62,.08); }
+.modern-site .mosaic-hero__index a { color: var(--pro-burgundy); font-size: .67rem; letter-spacing: .09em; }
+.modern-site .mosaic-hero__index a i { width: 34px; background: currentColor; }
+.modern-site .mosaic-hero__index > div { border-left: 1px solid #e1e7ee; }
+.modern-site .mosaic-hero__index strong { color: var(--pro-burgundy); font-size: 1.4rem; }
+.modern-site .mosaic-hero__index span { color: #68768b; font-size: .61rem; text-transform: none; }
+
+.modern-site .mosaic-way { display: block; min-height: 0; padding: 125px 0 100px; background: #fff; }
+.modern-site .mosaic-way__rail { display: none; }
+.modern-site .mosaic-way__content { grid-template-columns: .92fr 1fr .65fr; gap: clamp(32px, 5vw, 70px); width: var(--pro-container); padding: 0; }
+.modern-site .mosaic-way h2, .modern-site .mosaic-programmes h2, .modern-site .mosaic-campus h2, .modern-site .mosaic-notes h2, .modern-site .mosaic-admissions h2 { color: var(--pro-navy); font-family: Georgia, serif; font-size: clamp(2.5rem, 4.4vw, 4.7rem); font-weight: 500; letter-spacing: -.06em; line-height: .95; text-transform: none; }
+.modern-site .mosaic-way h2 em, .modern-site .mosaic-programmes h2 em, .modern-site .mosaic-notes h2 em, .modern-site .mosaic-admissions h2 em { color: var(--pro-burgundy); font-family: Georgia, serif; font-weight: 500; text-transform: none; }
+.modern-site .mosaic-way__story { padding-top: 27px; }
+.modern-site .mosaic-way__story p { font-size: .96rem; }
+.modern-site .mosaic-line-link { border-bottom: 1px solid var(--pro-burgundy); color: var(--pro-burgundy); font-size: .73rem; letter-spacing: .04em; text-transform: none; }
+.modern-site .mosaic-way__motto { margin-top: 22px; padding: 26px; border-radius: 14px; background: var(--pro-navy); box-shadow: none; }
+.modern-site .mosaic-way__motto p { font-family: Georgia, serif; font-size: 1.4rem; font-weight: 500; letter-spacing: -.04em; text-transform: none; }
+
+.modern-site .mosaic-programmes { grid-template-columns: .85fr 1.15fr; gap: 70px; padding: 105px max(32px, calc((100vw - 1180px)/2)); background: var(--pro-mist); }
+.modern-site .mosaic-programmes__list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.modern-site .mosaic-programme { display: grid; grid-template-columns: 27px 1fr; min-height: 170px; padding: 24px; border: 1px solid #dce3eb; border-radius: 14px; color: var(--pro-navy); background: #fff; box-shadow: 0 8px 20px rgba(16,35,62,.035); }
+.modern-site .mosaic-programme:last-child { border-bottom: 1px solid #dce3eb; }
+.modern-site .mosaic-programme:hover { padding: 24px; color: var(--pro-navy); background: #fff; box-shadow: var(--pro-shadow); transform: translateY(-3px); }
+.modern-site .mosaic-programme__number { color: var(--pro-burgundy); }
+.modern-site .mosaic-programme p { color: var(--pro-burgundy); font-size: .59rem; }
+.modern-site .mosaic-programme h3 { font-family: Georgia, serif; font-size: 1.45rem; font-weight: 500; letter-spacing: -.04em; }
+.modern-site .mosaic-programme small { color: #65748b; font-size: .68rem; }
+.modern-site .mosaic-programme__arrow { display: none; }
+
+/* Performance section becomes a clean recognitions gallery. */
+.modern-site .honours-wall { padding: 106px max(32px, calc((100vw - 1180px)/2)); color: var(--pro-navy); background: #fff; }
+.modern-site .honours-wall::before, .modern-site .honours-wall::after { display: none; }
+.modern-site .honours-wall__masthead { grid-template-columns: 1fr .44fr .38fr; gap: 45px; }
+.modern-site .honours-wall__intro h2 { color: var(--pro-navy); font-family: Georgia, serif; font-size: clamp(3rem, 5.1vw, 5.4rem); font-weight: 500; letter-spacing: -.08em; line-height: .85; text-transform: none; }
+.modern-site .honours-wall__intro h2 em { color: var(--pro-burgundy); }
+.modern-site .honours-wall__intro > p:not(.mosaic-kicker) { color: #526176; }
+.modern-site .honours-wall__intro .mosaic-kicker { color: var(--pro-burgundy); }
+.modern-site .honours-wall__intro .mosaic-line-link { color: var(--pro-burgundy); }
+.modern-site .honours-wall__year { min-height: 180px; border: 0; border-radius: 16px; color: #fff; background: var(--pro-burgundy); box-shadow: none; transform: none; }
+.modern-site .honours-wall__year span, .modern-site .honours-wall__year small { color: rgba(255,255,255,.72); }
+.modern-site .honours-wall__year strong { color: var(--pro-gold); }
+.modern-site .honours-wall__note { border-left-color: var(--pro-gold); }
+.modern-site .honours-wall__note > span { color: var(--pro-burgundy); }
+.modern-site .honours-wall__note p { color: #637186; }
+.modern-site .honours-wall__controls { border-bottom-color: #dce3eb; }
+.modern-site .honours-tab { border: 1px solid #cfd8e3; border-radius: 999px; color: var(--pro-navy); background: #fff; text-transform: none; }
+.modern-site .honours-tab b { color: var(--pro-burgundy); }
+.modern-site .honours-tab:hover, .modern-site .honours-tab.is-active { border-color: var(--pro-burgundy); color: #fff; background: var(--pro-burgundy); }
+.modern-site .honours-wall__controls > span { color: #748297; text-transform: none; }
+.modern-site .honours-panel { grid-template-columns: 180px 1fr; gap: 25px; }
+.modern-site .honours-manifesto { min-height: 290px; border-radius: 14px; color: #fff; background: var(--pro-navy); box-shadow: none; }
+.modern-site .honours-manifesto--uace { background: var(--pro-violet); }
+.modern-site .honours-manifesto span { color: var(--pro-gold); }
+.modern-site .honours-card { min-width: 170px; height: 260px; border: 1px solid #dce3eb; border-radius: 12px; box-shadow: 0 8px 20px rgba(16,35,62,.09); }
+.modern-site .honours-card:nth-child(2n), .modern-site .honours-card:nth-child(3n) { margin-top: 0; }
+.modern-site .honours-card:hover { box-shadow: 0 13px 26px rgba(16,35,62,.17); transform: translateY(-5px); }
+.modern-site .honours-card figcaption { transform: none; padding: 10px; background: rgba(16,35,62,.9); }
+
+.modern-site .mosaic-campus { grid-template-columns: 1fr 1fr; min-height: 540px; margin: 0 auto; width: var(--pro-container); border-radius: var(--pro-radius); overflow: hidden; background: var(--pro-navy); }
+.modern-site .mosaic-campus__image { min-height: 540px; }
+.modern-site .mosaic-campus__image img { min-height: 540px; }
+.modern-site .mosaic-campus__image::after { background: linear-gradient(180deg, transparent 40%, rgba(16,35,62,.5)); }
+.modern-site .mosaic-campus__stamp { right: 35px; bottom: 35px; border-width: 1px; font-size: 1rem; }
+.modern-site .mosaic-campus__copy { padding: 78px clamp(35px, 6vw, 82px); background: var(--pro-navy); }
+.modern-site .mosaic-campus__copy h2 { color: #fff; font-size: clamp(2.45rem, 4vw, 4.1rem); }
+.modern-site .mosaic-campus__copy .mosaic-kicker { color: var(--pro-gold); }
+.modern-site .mosaic-campus__copy li b { border-radius: 50%; color: #fff; background: var(--pro-burgundy); }
+
+.modern-site .mosaic-voices { padding: 105px max(32px, calc((100vw - 1180px)/2)); background: var(--pro-mist); }
+.modern-site .mosaic-voices::before { display: none; }
+.modern-site .mosaic-voices__layout { grid-template-columns: .7fr 1.1fr .55fr; border-radius: var(--pro-radius); overflow: hidden; box-shadow: var(--pro-shadow); }
+.modern-site .mosaic-voices__portrait { min-height: 400px; }
+.modern-site .mosaic-voices__portrait figcaption { background: var(--pro-burgundy); text-transform: none; }
+.modern-site .mosaic-voices__quote { padding: 50px; color: var(--pro-navy); background: #fff; }
+.modern-site .mosaic-voices__quote > span { color: var(--pro-gold); }
+.modern-site .mosaic-voices__quote p { font-family: Georgia, serif; font-size: clamp(1.65rem, 2.5vw, 2.45rem); font-weight: 500; }
+.modern-site .mosaic-voices__quote cite { color: var(--pro-burgundy); }
+.modern-site .mosaic-voices__notes { background: var(--pro-burgundy); }
+.modern-site .mosaic-voices__notes b { color: var(--pro-gold); }
+
+.modern-site .mosaic-notes { grid-template-columns: .75fr 1.25fr; padding: 100px max(32px, calc((100vw - 1180px)/2)); background: #fff; }
+.modern-site .mosaic-note-grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 300px; }
+.modern-site .mosaic-note { border-radius: 14px; background: var(--pro-burgundy); }
+.modern-site .mosaic-note--pink { background: var(--pro-magenta); }
+.modern-site .mosaic-note--navy { grid-row: auto; background: var(--pro-navy); }
+.modern-site .mosaic-note--navy::before { border-color: rgba(255,255,255,.2); }
+.modern-site .mosaic-note h3 { font-family: Georgia, serif; font-size: 1.65rem; font-weight: 500; letter-spacing: -.04em; line-height: 1.04; }
+
+.modern-site .mosaic-admissions { background: linear-gradient(100deg, var(--pro-burgundy), #a4155b 58%, var(--pro-violet)); }
+.modern-site .mosaic-admissions::before { border-color: rgba(255,255,255,.15); }
+.modern-site .mosaic-admissions__stripe { color: var(--pro-navy); background: var(--pro-gold); }
+.modern-site .mosaic-admissions__content { grid-template-columns: 1fr .78fr; padding: 85px 0; }
+.modern-site .mosaic-admissions h2 { color: #fff; font-family: Georgia, serif; font-size: clamp(2.7rem, 4.3vw, 4.5rem); font-weight: 500; text-transform: none; }
+.modern-site .mosaic-button--light { border-radius: 10px; background: #fff; box-shadow: none; }
+.modern-site .mosaic-text-link--light { text-transform: none; }
+
+/* Professional pages keep their own visual voice while sharing the system. */
+.modern-site:not(.mosaic-home) .page-hero { min-height: 390px; padding: 68px 0; background: var(--pro-navy); }
+.modern-site:not(.mosaic-home) .page-hero--image { min-height: 420px; border-bottom: 0; background-position: center; }
+.modern-site:not(.mosaic-home) .page-hero--image::before { background: linear-gradient(90deg, rgba(16,35,62,.93), rgba(16,35,62,.72) 45%, rgba(16,35,62,.25)); }
+.modern-site:not(.mosaic-home) .page-hero__content { grid-template-columns: 1fr .65fr; gap: 60px; width: var(--pro-container); }
+.modern-site:not(.mosaic-home) .page-hero .eyebrow { color: var(--pro-gold); }
+.modern-site:not(.mosaic-home) .page-title { color: #fff; font-family: Georgia, serif; font-size: clamp(3rem, 5vw, 5.2rem); font-weight: 500; letter-spacing: -.07em; line-height: .92; text-transform: none; }
+.modern-site:not(.mosaic-home) .page-hero__lead { padding: 0 0 0 22px; border-top: 0; border-left: 2px solid var(--pro-gold); font-size: 1rem; }
+.modern-site:not(.mosaic-home) .page-hero__ribbon { width: 120px; height: 6px; background: var(--pro-gold); }
+.modern-site:not(.mosaic-home) .section-title { font-family: Georgia, serif; font-size: clamp(2.3rem, 4vw, 4.1rem); font-weight: 500; letter-spacing: -.065em; line-height: .98; }
+.modern-site:not(.mosaic-home) .feature-grid { gap: 18px; border: 0; }
+.modern-site:not(.mosaic-home) .feature-card { min-height: 0; border: 1px solid var(--pro-line); border-right: 1px solid var(--pro-line); border-radius: 15px; box-shadow: 0 9px 25px rgba(16,35,62,.04); }
+.modern-site:not(.mosaic-home) .feature-card:hover { border-color: #e4b1c7; background: #fff; box-shadow: var(--pro-shadow); transform: translateY(-4px); }
+.modern-site:not(.mosaic-home) .feature-card__icon { border-radius: 12px; background: var(--pro-burgundy); }
+.modern-site:not(.mosaic-home) .split-intro { gap: 80px; border-top: 0; }
+.modern-site:not(.mosaic-home) .split-intro__aside { padding: 0; border-right: 0; }
+.modern-site:not(.mosaic-home) .split-intro__copy { padding: 0; }
+.modern-site:not(.mosaic-home) .image-copy { gap: 70px; }
+.modern-site:not(.mosaic-home) .image-frame { margin: 0; }
+.modern-site:not(.mosaic-home) .image-frame::after { width: 55%; height: 45%; border: 2px solid var(--pro-burgundy); border-radius: 0 0 20px 0; }
+.modern-site:not(.mosaic-home) .image-frame img { border-radius: 18px; box-shadow: var(--pro-shadow); }
+.modern-site:not(.mosaic-home) .image-copy__content { padding: 0; }
+.modern-site:not(.mosaic-home) .quote-shell { border-radius: var(--pro-radius); box-shadow: var(--pro-shadow); }
+.modern-site:not(.mosaic-home) .quote-shell__body { color: var(--pro-navy); background: #fff; }
+.modern-site:not(.mosaic-home) .testimonial-slide blockquote { color: var(--pro-navy); }
+.modern-site:not(.mosaic-home) .testimonial-slide cite { color: var(--pro-burgundy); }
+.modern-site:not(.mosaic-home) .news-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.modern-site:not(.mosaic-home) .news-card, .modern-site:not(.mosaic-home) .news-card:first-child { grid-row: auto; border: 1px solid var(--pro-line); border-radius: 15px; }
+.modern-site:not(.mosaic-home) .news-card:hover { box-shadow: var(--pro-shadow); }
+.modern-site:not(.mosaic-home) .news-card__image, .modern-site:not(.mosaic-home) .news-card:first-child .news-card__image { height: 210px; }
+.modern-site:not(.mosaic-home) .stat-grid { gap: 18px; border: 0; }
+.modern-site:not(.mosaic-home) .stat-card { border: 1px solid rgba(255,255,255,.18); border-radius: 14px; }
+.modern-site:not(.mosaic-home) .academic-card, .modern-site:not(.mosaic-home) .step-card, .modern-site:not(.mosaic-home) .application-link { border: 1px solid var(--pro-line); border-radius: 14px; box-shadow: none; }
+.modern-site:not(.mosaic-home) .academic-card:hover, .modern-site:not(.mosaic-home) .step-card:hover { box-shadow: var(--pro-shadow); }
+.modern-site:not(.mosaic-home) .academic-card__index { border-radius: 12px; background: var(--pro-burgundy); }
+.modern-site:not(.mosaic-home) .form-shell { border: 1px solid var(--pro-line); border-radius: 18px; box-shadow: var(--pro-shadow); }
+.modern-site:not(.mosaic-home) .field input, .modern-site:not(.mosaic-home) .field select, .modern-site:not(.mosaic-home) .field textarea { border-radius: 9px; }
+.modern-site:not(.mosaic-home) .contact-card { border: 1px solid var(--pro-line); border-radius: 14px; }
+.modern-site:not(.mosaic-home) .contact-card__icon { border-radius: 10px; background: #f9e7ee; color: var(--pro-burgundy); }
+.modern-site:not(.mosaic-home) .map-placeholder { border-radius: 16px; }
+.modern-site:not(.mosaic-home) .gallery-item { border-radius: 14px; }
+.modern-site:not(.mosaic-home) .filter-button { border: 1px solid var(--pro-line); border-radius: 999px; }
+.modern-site:not(.mosaic-home) .filter-button:hover, .modern-site:not(.mosaic-home) .filter-button.is-active { background: var(--pro-burgundy); }
+.modern-site:not(.mosaic-home) .faq-item { border: 1px solid var(--pro-line); border-radius: 12px; }
+
+@media (max-width: 1000px) {
+  .modern-site .mosaic-hero__grid { grid-template-columns: minmax(0, .85fr) minmax(400px, 1.15fr); }
+  .modern-site .mosaic-way__content { grid-template-columns: 1fr 1fr; }
+  .modern-site .mosaic-way__motto { grid-column: 2; }
+  .modern-site .honours-wall__masthead { grid-template-columns: 1fr .5fr; }
+  .modern-site .honours-wall__note { display: none; }
+  .modern-site .mosaic-voices__layout { grid-template-columns: .75fr 1.25fr; }
+  .modern-site .mosaic-voices__notes { grid-column: 1 / -1; grid-template-columns: repeat(3, 1fr); }
+  .modern-site .mosaic-notes { grid-template-columns: .8fr 1.2fr; gap: 44px; }
+  .modern-site .mosaic-note-grid { grid-template-columns: 1fr 1fr; }
+  .modern-site .mosaic-admissions__content { gap: 45px; }
+}
+
+@media (max-width: 800px) {
+  .modern-site .mosaic-hero__grid { grid-template-columns: 1fr; width: min(100% - 36px, 640px); }
+  .modern-site .mosaic-hero__intro { padding: 64px 0 35px; }
+  .modern-site .mosaic-hero__visual { min-height: 450px; }
+  .modern-site .mosaic-photo--main { top: 22px; width: 82%; height: 355px; }
+  .modern-site .mosaic-photo--postcard { bottom: 22px; }
+  .modern-site .mosaic-hero__index { width: min(100% - 36px, 640px); margin-top: 0; }
+  .modern-site .mosaic-way { padding: 80px 0; }
+  .modern-site .mosaic-way__content { grid-template-columns: 1fr; width: min(100% - 36px, 640px); }
+  .modern-site .mosaic-way__motto { grid-column: auto; }
+  .modern-site .mosaic-programmes { grid-template-columns: 1fr; padding: 80px 24px; }
+  .modern-site .mosaic-programmes__list { grid-template-columns: 1fr 1fr; }
+  .modern-site .honours-wall { padding-inline: 24px; }
+  .modern-site .honours-wall__masthead { grid-template-columns: 1fr; }
+  .modern-site .honours-wall__year { width: 190px; }
+  .modern-site .mosaic-campus { grid-template-columns: 1fr; width: 100%; border-radius: 0; }
+  .modern-site .mosaic-campus__copy { padding: 70px 30px; }
+  .modern-site .mosaic-voices { padding: 80px 24px; }
+  .modern-site .mosaic-voices__layout { grid-template-columns: 1fr; }
+  .modern-site .mosaic-voices__notes { grid-column: auto; grid-template-columns: 1fr; }
+  .modern-site .mosaic-notes { grid-template-columns: 1fr; padding: 80px 24px; }
+  .modern-site .mosaic-note-grid { grid-template-columns: repeat(3, 1fr); }
+  .modern-site .mosaic-admissions__content { grid-template-columns: 1fr; width: min(100% - 40px, 640px); padding: 75px 0; }
+  .modern-site:not(.mosaic-home) .page-hero__content { grid-template-columns: 1fr; gap: 25px; }
+  .modern-site:not(.mosaic-home) .page-hero__lead { grid-column: auto; }
+  .modern-site:not(.mosaic-home) .feature-grid, .modern-site:not(.mosaic-home) .news-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px) {
+  .modern-site .mosaic-hero h1 { font-size: clamp(3.45rem, 15vw, 5.1rem); }
+  .modern-site .mosaic-hero__visual { min-height: 375px; }
+  .modern-site .mosaic-photo--main { height: 292px; }
+  .modern-site .mosaic-photo--postcard { width: 160px; height: 108px; }
+  .modern-site .mosaic-hero__seal { width: 70px; height: 70px; }
+  .modern-site .mosaic-hero__index { grid-template-columns: 1fr 1fr; }
+  .modern-site .mosaic-hero__index a { grid-column: 1 / -1; }
+  .modern-site .mosaic-hero__index > div { padding: 13px; }
+  .modern-site .mosaic-way h2, .modern-site .mosaic-programmes h2, .modern-site .mosaic-campus h2, .modern-site .mosaic-notes h2, .modern-site .mosaic-admissions h2 { font-size: clamp(2.5rem, 12vw, 4rem); }
+  .modern-site .mosaic-programmes { padding-inline: 18px; }
+  .modern-site .mosaic-programmes__list { grid-template-columns: 1fr; }
+  .modern-site .mosaic-programme { min-height: 135px; }
+  .modern-site .mosaic-campus__image, .modern-site .mosaic-campus__image img { min-height: 380px; }
+  .modern-site .mosaic-voices { padding-inline: 18px; }
+  .modern-site .mosaic-voices__quote { padding: 30px 23px; }
+  .modern-site .mosaic-notes { padding-inline: 18px; }
+  .modern-site .mosaic-note-grid { grid-template-columns: 1fr; }
+  .modern-site .mosaic-note--navy { grid-row: auto; }
+  .modern-site .honours-wall { padding-inline: 18px; }
+  .modern-site .honours-panel { grid-template-columns: 1fr; }
+  .modern-site .honours-manifesto { min-height: 120px; flex-direction: row; align-items: end; }
+  .modern-site .honours-card { min-width: 150px; height: 230px; }
+  .modern-site:not(.mosaic-home) .page-title { font-size: clamp(2.8rem, 12vw, 4.2rem); }
+  .modern-site:not(.mosaic-home) .feature-grid, .modern-site:not(.mosaic-home) .news-grid { grid-template-columns: 1fr; }
+  .modern-site .footer-main { grid-template-columns: 1fr; }
+}

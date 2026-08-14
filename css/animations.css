@@ -1,0 +1,23 @@
+/* Motion is intentionally subtle: content remains visible before JavaScript runs. */
+.js .reveal { opacity: 1; transform: none; }
+.js .reveal.is-visible { animation: revealUp .68s cubic-bezier(.2,.65,.25,1) both; }
+.js .reveal--left.is-visible { animation-name: revealFromLeft; }
+.js .reveal--right.is-visible { animation-name: revealFromRight; }
+.js .stagger > .reveal:nth-child(2).is-visible { animation-delay: .08s; }
+.js .stagger > .reveal:nth-child(3).is-visible { animation-delay: .16s; }
+.js .stagger > .reveal:nth-child(4).is-visible { animation-delay: .24s; }
+
+.float-slow { animation: floatSlow 6s ease-in-out infinite; }
+.pulse-dot { animation: pulseDot 2.1s ease-in-out infinite; }
+.hero-visual__pill::before { animation: pulseDot 2.1s ease-in-out infinite; }
+
+@keyframes revealUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+@keyframes revealFromLeft { from { opacity: 0; transform: translateX(-24px); } to { opacity: 1; transform: none; } }
+@keyframes revealFromRight { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: none; } }
+@keyframes floatSlow { 50% { transform: translateY(-9px); } }
+@keyframes pulseDot { 50% { box-shadow: 0 0 0 9px rgba(8,138,119,0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal, .js .reveal.is-visible, .js .reveal--left.is-visible, .js .reveal--right.is-visible { animation: none; opacity: 1; transform: none; }
+  .float-slow, .pulse-dot, .hero-visual__pill::before { animation: none; }
+}
